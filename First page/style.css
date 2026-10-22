@@ -1,0 +1,212 @@
+/* ---------- Colours ---------- */
+:root {
+    --base: #F2EAE0;
+    --header: #BDA6CE;
+    --accent-1: #9B8EC7;
+    --accent-2: #B4D3D9;
+    --text: #000000;
+}
+
+/* ---------- Fonts ---------- */
+h1, h2, h3, .logo, .eyebrow {
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+body {
+    font-family: 'Encode Sans Semi Expanded', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--base);
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    background: var(--header);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.logo {
+    font-size: 2em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+    border-bottom-color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.eyebrow {
+    font-size: 1.5em;
+    color: var(--accent-1);
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(56px, 10vw, 100px);
+    line-height: 0.95;
+    margin: 0 0 24px;
+}
+
+.lead {
+    font-size: 1.1em;
+    max-width: 32em;
+}
+
+.hero-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 16px;
+    box-shadow: 16px 16px 0 var(--accent-1);
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 28px;
+    background: var(--accent-1);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: var(--accent-2);
+}
+
+/* ---------- Sections ---------- */
+.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+h2 {
+    font-size: 3.5em;
+    margin: 0 0 16px;
+    border-bottom: 4px solid var(--accent-2);
+    display: inline-block;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: var(--accent-2);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.card-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.card-alt {
+    background: var(--accent-1);
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0 0 8px;
+}
+
+.contact {
+    text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: var(--header);
+    padding: 16px 0;
+    margin-top: 48px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 32px;
+    }
+
+    .hero-photo {
+        order: -1;
+        max-width: 360px;
+        padding-right: 12px;
+    }
+
+    h2 {
+        font-size: 2.8em;
+    }
+}
